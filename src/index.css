@@ -2,41 +2,71 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* LPC Arabic Educational Platform Design System */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap');
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* LPC Brand Colors - Purple-Blue Gradient Theme */
+    --background: 0 0% 98%;
+    --foreground: 225 15% 15%;
 
+    /* Primary Purple Brand */
+    --primary: 262 83% 58%; /* #8B5CF6 - Main purple */
+    --primary-foreground: 0 0% 100%;
+    --primary-dark: 262 83% 48%;
+    --primary-light: 262 83% 68%;
+
+    /* Secondary Blue */
+    --secondary: 217 91% 60%; /* #3B82F6 - Complementary blue */
+    --secondary-foreground: 0 0% 100%;
+    --secondary-dark: 217 91% 50%;
+    --secondary-light: 217 91% 70%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(262 83% 58%), hsl(217 91% 60%));
+    --gradient-secondary: linear-gradient(45deg, hsl(262 83% 68%), hsl(217 91% 70%));
+    --gradient-dark: linear-gradient(135deg, hsl(262 83% 48%), hsl(217 91% 50%));
+    --gradient-hero: linear-gradient(135deg, hsl(262 83% 58%) 0%, hsl(217 91% 60%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(262 83% 96%) 0%, hsl(217 91% 96%) 100%);
+
+    /* UI Colors */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 225 15% 15%;
+    --card-hover: 262 30% 97%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 225 15% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --muted: 225 10% 95%;
+    --muted-foreground: 225 8% 45%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --accent: 262 30% 95%;
+    --accent-foreground: 262 83% 58%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 225 10% 90%;
+    --input: 225 10% 95%;
+    --ring: 262 83% 58%;
 
-    --radius: 0.5rem;
+    /* Shadows */
+    --shadow-primary: 0 10px 30px -10px hsl(262 83% 58% / 0.3);
+    --shadow-secondary: 0 10px 30px -10px hsl(217 91% 60% / 0.3);
+    --shadow-card: 0 4px 20px -4px hsl(262 83% 58% / 0.1);
+    --shadow-hover: 0 8px 30px -8px hsl(262 83% 58% / 0.2);
+
+    /* Border Radius */
+    --radius: 1rem;
+    --radius-lg: 1.5rem;
+    --radius-xl: 2rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -95,11 +125,185 @@ All colors MUST be HSL.
 }
 
 @layer base {
+  /* RTL Support */
+  html[dir="rtl"] {
+    direction: rtl;
+  }
+  
+  html[dir="ltr"] {
+    direction: ltr;
+  }
+
   * {
     @apply border-border;
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-cairo antialiased;
+    direction: rtl;
+  }
+  
+  /* Arabic Typography Optimization */
+  .font-cairo {
+    font-family: 'Cairo', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+}
+
+@layer components {
+  /* LPC Gradient Backgrounds */
+  .bg-gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .bg-gradient-secondary {
+    background: var(--gradient-secondary);
+  }
+  
+  .bg-gradient-dark {
+    background: var(--gradient-dark);
+  }
+  
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .bg-gradient-card {
+    background: var(--gradient-card);
+  }
+
+  /* LPC Shadows */
+  .shadow-primary {
+    box-shadow: var(--shadow-primary);
+  }
+  
+  .shadow-secondary {
+    box-shadow: var(--shadow-secondary);
+  }
+  
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .shadow-hover {
+    box-shadow: var(--shadow-hover);
+  }
+
+  /* Interactive Elements */
+  .btn-primary {
+    @apply bg-gradient-primary text-white font-semibold px-8 py-4 rounded-xl shadow-primary hover:shadow-hover transform hover:scale-105 transition-all duration-300 ease-out;
+  }
+  
+  .btn-secondary {
+    @apply bg-gradient-secondary text-white font-semibold px-6 py-3 rounded-lg shadow-secondary hover:shadow-hover transform hover:scale-105 transition-all duration-300 ease-out;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-primary text-primary font-semibold px-6 py-3 rounded-lg hover:bg-primary hover:text-white transition-all duration-300 ease-out;
+  }
+
+  /* Card Components */
+  .card-interactive {
+    @apply bg-card border border-border rounded-xl shadow-card hover:shadow-hover transform hover:scale-102 hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer;
+  }
+  
+  .card-service {
+    @apply bg-gradient-card backdrop-blur-sm border border-white/20 rounded-xl shadow-card hover:shadow-hover transform hover:scale-105 hover:-translate-y-2 transition-all duration-500 ease-out cursor-pointer;
+  }
+
+  /* Animations */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  .animate-slide-in-right {
+    animation: slideInRight 0.8s ease-out forwards;
+  }
+  
+  .animate-slide-in-left {
+    animation: slideInLeft 0.8s ease-out forwards;
+  }
+  
+  .animate-fade-in-up {
+    animation: fadeInUp 1s ease-out forwards;
+  }
+  
+  .animate-counter {
+    animation: counter 2s ease-out forwards;
+  }
+
+  /* Smooth Scrolling */
+  .scroll-smooth {
+    scroll-behavior: smooth;
+  }
+  
+  /* Backdrop Blur */
+  .backdrop-blur-glass {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+  
+  /* RTL Specific Utilities */
+  .rtl\:mr-auto {
+    margin-right: auto;
+  }
+  
+  .rtl\:ml-auto {
+    margin-left: auto;
+  }
+}
+
+@layer utilities {
+  /* Custom Keyframes */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+  
+  @keyframes slideInRight {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
+  
+  @keyframes slideInLeft {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
+  
+  @keyframes fadeInUp {
+    from { transform: translateY(60px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  
+  @keyframes counter {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+  
+  @keyframes shimmer {
+    0% { background-position: -468px 0; }
+    100% { background-position: 468px 0; }
+  }
+  
+  /* Loading States */
+  .loading-shimmer {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 400% 100%;
+    animation: shimmer 1.2s ease-in-out infinite;
+  }
+  
+  /* Scale Utilities */
+  .scale-102 {
+    transform: scale(1.02);
+  }
+  
+  /* Glass Morphism */
+  .glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
   }
 }
