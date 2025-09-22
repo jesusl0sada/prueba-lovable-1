@@ -128,7 +128,7 @@ const Hero = () => {
               <div className="bg-white/20 backdrop-blur-sm border border-white/30 rounded-full px-6 py-2 text-white font-medium">
                 <span className="flex items-center gap-2">
                   <Award className="w-5 h-5" />
-                  منصة التعلم الأولى عربياً
+                  Plataforma #1 de Aprendizaje
                 </span>
               </div>
             </motion.div>
@@ -136,13 +136,13 @@ const Hero = () => {
             {/* Main Heading */}
             <motion.div variants={itemVariants}>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
-                احصل على أفضل الدورات التدريبية
+                Obtén los Mejores Cursos de Formación
                 <br />
                 <span className="bg-gradient-to-r from-yellow-300 to-orange-400 bg-clip-text text-transparent">
-                  واكتسب المهارات اللازمة
+                  y Adquiere las Habilidades Necesarias
                 </span>
                 <br />
-                للنجاح في مجال التكنولوجيا والأعمال
+                para el Éxito en Tecnología y Negocios
               </h1>
             </motion.div>
 
@@ -151,8 +151,8 @@ const Hero = () => {
               variants={itemVariants}
               className="text-xl text-white/90 leading-relaxed max-w-2xl mx-auto lg:mx-0"
             >
-              انضم إلى أكثر من 2,966 طالب وطالبة في رحلة التعلم والتطوير المهني. 
-              احصل على شهادات معتمدة مع خبراء متخصصين في كل مجال.
+              Únete a más de 5,847 estudiantes en el viaje del aprendizaje y desarrollo profesional. 
+              Obtén certificados acreditados con expertos especializados en cada campo.
             </motion.p>
 
             {/* Features Grid */}
@@ -164,19 +164,19 @@ const Hero = () => {
                 <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mx-auto mb-2">
                   <Users className="w-6 h-6 text-white" />
                 </div>
-                <p className="text-white/80 text-sm">+2,966 طالب</p>
+                <p className="text-white/80 text-sm">+5,847 estudiantes</p>
               </div>
               <div className="text-center">
                 <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mx-auto mb-2">
                   <Award className="w-6 h-6 text-white" />
                 </div>
-                <p className="text-white/80 text-sm">شهادات معتمدة</p>
+                <p className="text-white/80 text-sm">Certificados acreditados</p>
               </div>
               <div className="text-center">
                 <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mx-auto mb-2">
                   <TrendingUp className="w-6 h-6 text-white" />
                 </div>
-                <p className="text-white/80 text-sm">نمو مهني</p>
+                <p className="text-white/80 text-sm">Crecimiento profesional</p>
               </div>
             </motion.div>
 
@@ -189,11 +189,11 @@ const Hero = () => {
               >
                 <span className="flex items-center gap-3">
                   <Sparkles className="w-5 h-5 group-hover:rotate-12 transition-transform" />
-                  احصل على استشارة مجانية
+                  Obtén una Consulta Gratuita
                 </span>
               </Button>
               <p className="text-white/70 text-sm">
-                * استشارة مجانية لمدة 30 دقيقة مع خبرائنا
+                * Consulta gratuita de 30 minutos con nuestros expertos
               </p>
             </motion.div>
           </motion.div>
@@ -213,7 +213,7 @@ const Hero = () => {
               <div className="relative">
                 <img
                   src={heroImage}
-                  alt="طالبة محجبة تحمل كتب وتتحدث في الهاتف"
+                  alt="Estudiante con hijab sosteniendo libros y hablando por teléfono"
                   className="w-full max-w-lg mx-auto rounded-3xl shadow-2xl"
                 />
                 
@@ -235,8 +235,8 @@ const Hero = () => {
                       <Award className="w-5 h-5 text-white" />
                     </div>
                     <div>
-                      <p className="font-semibold text-sm">شهادة معتمدة</p>
-                      <p className="text-xs text-muted-foreground">معترف بها دولياً</p>
+                      <p className="font-semibold text-sm">Certificado Acreditado</p>
+                      <p className="text-xs text-muted-foreground">Reconocido internacionalmente</p>
                     </div>
                   </div>
                 </motion.div>
@@ -259,8 +259,8 @@ const Hero = () => {
                       <TrendingUp className="w-5 h-5 text-white" />
                     </div>
                     <div>
-                      <p className="font-semibold text-sm">98% نجاح</p>
-                      <p className="text-xs text-muted-foreground">معدل إكمال الدورات</p>
+                      <p className="font-semibold text-sm">98% éxito</p>
+                      <p className="text-xs text-muted-foreground">Tasa de finalización de cursos</p>
                     </div>
                   </div>
                 </motion.div>
@@ -281,7 +281,7 @@ const Hero = () => {
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white/70"
       >
         <div className="flex flex-col items-center gap-2">
-          <span className="text-sm">اسحب للأسفل</span>
+          <span className="text-sm">Desplázate hacia abajo</span>
           <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
             <div className="w-1 h-3 bg-white/50 rounded-full mt-2 animate-pulse" />
           </div>

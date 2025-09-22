@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        cairo: ['Cairo', 'system-ui', 'sans-serif'],
-        sans: ['Cairo', 'system-ui', 'sans-serif'],
+        inter: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",

@@ -33,10 +33,10 @@ const Header = () => {
   };
 
   const navItems = [
-    { label: 'الرئيسية', id: 'hero' },
-    { label: 'الخدمات', id: 'services' },
-    { label: 'عنا', id: 'testimonials' },
-    { label: 'اتصل بنا', id: 'contact' },
+    { label: 'Inicio', id: 'hero' },
+    { label: 'Servicios', id: 'services' },
+    { label: 'Sobre Nosotros', id: 'testimonials' },
+    { label: 'Contacto', id: 'contact' },
   ];
 
   const headerVariants = {
@@ -65,22 +65,22 @@ const Header = () => {
           {/* Logo */}
           <motion.button
             onClick={() => scrollToSection('hero')}
-            className="flex items-center space-x-2 rtl:space-x-reverse group"
+            className="flex items-center space-x-2 group"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
             <div className="w-10 h-10 bg-gradient-primary rounded-xl flex items-center justify-center shadow-primary group-hover:shadow-hover transition-all duration-300">
-              <span className="text-white font-bold text-xl">L</span>
+              <span className="text-white font-bold text-xl">E</span>
             </div>
             <span className={`text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent ${
               isScrolled ? '' : 'text-white'
             }`}>
-              LPC
+              EduPlatform
             </span>
           </motion.button>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8 rtl:space-x-reverse">
+          <nav className="hidden lg:flex items-center space-x-8">
             {navItems.map((item, index) => (
               <motion.button
                 key={item.id}
@@ -103,13 +103,13 @@ const Header = () => {
           </nav>
 
           {/* Auth Section */}
-          <div className="hidden lg:flex items-center space-x-4 rtl:space-x-reverse">
+          <div className="hidden lg:flex items-center space-x-4">
             {user ? (
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button 
                     variant="ghost" 
-                    className={`flex items-center space-x-2 rtl:space-x-reverse ${
+                    className={`flex items-center space-x-2 ${
                       isScrolled ? 'text-foreground' : 'text-white'
                     }`}
                   >
@@ -120,19 +120,19 @@ const Header = () => {
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end" className="w-48 bg-white/95 backdrop-blur-glass">
                   <DropdownMenuItem className="font-medium">
-                    لوحة التحكم
+                    Panel de Control
                   </DropdownMenuItem>
                   <DropdownMenuItem className="font-medium">
-                    دوراتي
+                    Mis Cursos
                   </DropdownMenuItem>
                   <DropdownMenuItem className="font-medium">
-                    الشهادات
+                    Certificados
                   </DropdownMenuItem>
                   <DropdownMenuItem 
                     onClick={logout}
                     className="font-medium text-destructive"
                   >
-                    تسجيل الخروج
+                    Cerrar Sesión
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
@@ -149,8 +149,8 @@ const Header = () => {
                       : 'border-white text-white hover:bg-white hover:text-primary'
                   }`}
                 >
-                  <LogIn className="w-4 h-4 ml-2" />
-                  تسجيل الدخول
+                  <LogIn className="w-4 h-4 mr-2" />
+                  Iniciar Sesión
                 </Button>
               </motion.div>
             )}
@@ -189,12 +189,12 @@ const Header = () => {
             >
               <div className="p-6 space-y-6">
                 <div className="flex items-center justify-between">
-                  <div className="flex items-center space-x-2 rtl:space-x-reverse">
+                  <div className="flex items-center space-x-2">
                     <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
-                      <span className="text-white font-bold">L</span>
+                      <span className="text-white font-bold">E</span>
                     </div>
                     <span className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-                      LPC
+                      EduPlatform
                     </span>
                   </div>
                   <Button
@@ -236,8 +236,8 @@ const Header = () => {
                       }}
                       className="btn-primary w-full"
                     >
-                      <LogIn className="w-4 h-4 ml-2" />
-                      تسجيل الدخول
+                      <LogIn className="w-4 h-4 mr-2" />
+                      Iniciar Sesión
                     </Button>
                   </motion.div>
                 )}

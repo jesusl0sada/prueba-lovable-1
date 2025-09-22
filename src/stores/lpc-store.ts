@@ -95,90 +95,134 @@ export const useLPCStore = create<LPCState>((set, get) => ({
   services: [
     {
       id: '1',
-      title: 'اختبار البرمجيات',
-      description: 'تعلم أحدث أساليب اختبار البرمجيات والجودة في التطوير',
+      title: 'Pruebas de Software',
+      description: 'Aprende las técnicas más avanzadas de testing y aseguramiento de calidad en desarrollo',
       icon: '💻',
       price: 299,
-      duration: '8 أسابيع',
+      duration: '8 semanas',
       students: 1245,
       rating: 4.8,
-      category: 'تكنولوجيا',
+      category: 'Tecnología',
       modules: [
-        'مقدمة في اختبار البرمجيات',
-        'الاختبار اليدوي والآلي', 
-        'أدوات الاختبار المتقدمة',
-        'إدارة دورة حياة الاختبار'
+        'Introducción a las pruebas de software',
+        'Testing manual y automatizado', 
+        'Herramientas avanzadas de testing',
+        'Gestión del ciclo de vida de pruebas'
       ],
       instructor: {
-        name: 'أحمد محمد',
+        name: 'Ahmed Mohamed',
         avatar: '/instructor-1.jpg',
-        bio: 'خبير في اختبار البرمجيات مع أكثر من 10 سنوات خبرة'
+        bio: 'Experto en pruebas de software con más de 10 años de experiencia'
       }
     },
     {
       id: '2',
-      title: 'مطور مبدعي كامل',
-      description: 'كن مطور ويب متكامل واحترف أحدث التقنيات',
+      title: 'Desarrollador Full Stack',
+      description: 'Conviértete en un desarrollador web completo y domina las últimas tecnologías',
       icon: '🚀',
       price: 499,
-      duration: '12 أسبوع',
+      duration: '12 semanas',
       students: 987,
       rating: 4.9,
-      category: 'تطوير',
+      category: 'Desarrollo',
       modules: [
-        'أساسيات HTML وCSS',
-        'JavaScript المتقدم',
-        'React وNext.js',
-        'Node.js وقواعد البيانات'
+        'Fundamentos de HTML y CSS',
+        'JavaScript avanzado',
+        'React y Next.js',
+        'Node.js y bases de datos'
       ],
       instructor: {
-        name: 'سارة أحمد',
+        name: 'Sara Ahmed',
         avatar: '/instructor-2.jpg',
-        bio: 'مطورة ويب محترفة ومدربة معتمدة'
+        bio: 'Desarrolladora web profesional y formadora certificada'
       }
     },
     {
       id: '3',
-      title: 'المحاسبة وضرائب الدولات',
-      description: 'احترف المحاسبة المالية والضرائب الدولية',
+      title: 'Contabilidad y Fiscalidad Internacional',
+      description: 'Domina la contabilidad financiera y los impuestos internacionales',
       icon: '📊',
       price: 399,
-      duration: '10 أسابيع',
+      duration: '10 semanas',
       students: 756,
       rating: 4.7,
-      category: 'محاسبة',
+      category: 'Finanzas',
       modules: [
-        'أساسيات المحاسبة المالية',
-        'القوانين الضريبية الدولية',
-        'إعداد التقارير المالية',
-        'التدقيق والمراجعة'
+        'Fundamentos de contabilidad financiera',
+        'Legislación fiscal internacional',
+        'Preparación de informes financieros',
+        'Auditoría y revisión'
       ],
       instructor: {
-        name: 'محمد السعد',
+        name: 'Mohamed Al-Saad',
         avatar: '/instructor-3.jpg',
-        bio: 'محاسب قانوني معتمد وخبير ضرائب'
+        bio: 'Contador público certificado y experto fiscal'
       }
     },
     {
       id: '4',
-      title: 'احصل على الاستشارة المجانية',
-      description: 'استشارة مجانية لتحديد أفضل مسار تعليمي لك',
+      title: 'Consulta Gratuita',
+      description: 'Consulta gratuita para determinar la mejor ruta de aprendizaje para ti',
       icon: '💡',
       price: 0,
-      duration: '30 دقيقة',
+      duration: '30 minutos',
       students: 2156,
       rating: 5.0,
-      category: 'استشارة',
+      category: 'Consulta',
       modules: [
-        'تقييم المهارات الحالية',
-        'تحديد الأهداف المهنية',
-        'وضع خطة التطوير',
-        'اختيار الدورات المناسبة'
+        'Evaluación de habilidades actuales',
+        'Definición de objetivos profesionales',
+        'Plan de desarrollo personalizado',
+        'Selección de cursos apropiados'
       ],
       instructor: {
-        name: 'فريق LPC',
+        name: 'Equipo EduPlatform',
         avatar: '/team-avatar.jpg',
-        bio: 'فريق من الخبراء والمستشارين المهنيين'
+        bio: 'Equipo de expertos y consultores profesionales'
+      }
+    },
+    {
+      id: '5',
+      title: 'Marketing Digital',
+      description: 'Domina las estrategias de marketing digital y redes sociales',
+      icon: '📱',
+      price: 249,
+      duration: '6 semanas',
+      students: 1891,
+      rating: 4.6,
+      category: 'Marketing',
+      modules: [
+        'Fundamentos del marketing digital',
+        'SEO y SEM avanzado',
+        'Marketing en redes sociales',
+        'Análisis y métricas'
+      ],
+      instructor: {
+        name: 'Laila Hassan',
+        avatar: '/instructor-4.jpg',
+        bio: 'Especialista en marketing digital con certificaciones Google y Facebook'
+      }
+    },
+    {
+      id: '6',
+      title: 'Diseño UX/UI',
+      description: 'Crea experiencias digitales excepcionales con diseño centrado en el usuario',
+      icon: '🎨',
+      price: 349,
+      duration: '9 semanas',
+      students: 1456,
+      rating: 4.9,
+      category: 'Diseño',
+      modules: [
+        'Principios de UX Research',
+        'Wireframing y prototipado',
+        'Diseño de interfaces modernas',
+        'Testing de usabilidad'
+      ],
+      instructor: {
+        name: 'Omar Benali',
+        avatar: '/instructor-5.jpg',
+        bio: 'Diseñador UX/UI con experiencia en startups y grandes corporaciones'
       }
     }
   ],
@@ -186,39 +230,57 @@ export const useLPCStore = create<LPCState>((set, get) => ({
   testimonials: [
     {
       id: '1',
-      name: 'فاطمة محمد',
-      role: 'مطورة برمجيات',
-      content: 'الدورة غيرت حياتي المهنية بالكامل. المحتوى ممتاز والمدربين محترفين جداً.',
+      name: 'Fatima Mohamed',
+      role: 'Desarrolladora de Software',
+      content: 'El curso cambió completamente mi carrera profesional. El contenido es excelente y los instructores son muy profesionales.',
       rating: 5,
       avatar: '/testimonial-1.jpg',
-      course: 'مطور مبدعي كامل',
+      course: 'Desarrollador Full Stack',
       video: '/testimonial-video-1.mp4'
     },
     {
       id: '2', 
-      name: 'عمر السعد',
-      role: 'محاسب مالي',
-      content: 'تعلمت أحدث تقنيات المحاسبة والضرائب. أنصح بها بشدة لكل المهتمين.',
+      name: 'Omar Al-Saad',
+      role: 'Contador Financiero',
+      content: 'Aprendí las técnicas más modernas de contabilidad e impuestos. Lo recomiendo encarecidamente a todos los interesados.',
       rating: 5,
       avatar: '/testimonial-2.jpg',
-      course: 'المحاسبة وضرائب الدولات'
+      course: 'Contabilidad y Fiscalidad Internacional'
     },
     {
       id: '3',
-      name: 'رانا أحمد',
-      role: 'مختبرة برمجيات',
-      content: 'الدورة شاملة ومفصلة. ساعدتني في الحصول على وظيفة أحلامي.',
+      name: 'Rana Ahmed',
+      role: 'Tester de Software',
+      content: 'El curso es completo y detallado. Me ayudó a conseguir el trabajo de mis sueños.',
       rating: 4,
       avatar: '/testimonial-3.jpg',
-      course: 'اختبار البرمجيات'
+      course: 'Pruebas de Software'
+    },
+    {
+      id: '4',
+      name: 'Hassan Al-Rashid',
+      role: 'Especialista en Marketing Digital',
+      content: 'Increíble nivel de profundidad en marketing digital. Los casos prácticos son muy valiosos.',
+      rating: 5,
+      avatar: '/testimonial-4.jpg',
+      course: 'Marketing Digital'
+    },
+    {
+      id: '5',
+      name: 'Amira Benali',
+      role: 'Diseñadora UX/UI',
+      content: 'El mejor curso de diseño que he tomado. Ahora trabajo en una startup internacional.',
+      rating: 5,
+      avatar: '/testimonial-5.jpg',
+      course: 'Diseño UX/UI'
     }
   ],
   
   statistics: {
-    students: 2966,
-    courses: 52,
-    certificates: 83,
-    instructors: 15
+    students: 5847,
+    courses: 87,
+    certificates: 156,
+    instructors: 28
   },
   
   // Actions
@@ -238,7 +300,7 @@ export const useLPCStore = create<LPCState>((set, get) => ({
       set({
         user: {
           id: '1',
-          name: 'محمد أحمد',
+          name: 'Mohamed Ahmed',
           email,
           avatar: '/user-avatar.jpg',
           isAuthenticated: true

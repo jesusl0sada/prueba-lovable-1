@@ -24,8 +24,8 @@ const LPCLayout = () => {
       variants={pageVariants}
       initial="initial"
       animate="animate"
-      className="min-h-screen bg-background font-cairo"
-      dir="rtl"
+      className="min-h-screen bg-background font-inter"
+      dir="ltr"
     >
       {/* Header */}
       <Header />
